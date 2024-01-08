@@ -95,6 +95,11 @@ body {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
+  transition: color 0.3s ease-in-out;
+  
+  &:hover {
+    color: $success;
+  }
 
   &::after {
     content: '';
@@ -104,7 +109,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: $text;
+    background-color: $success;
     transform-origin: bottom right;
     transition: transform 0.3s ease-in-out;
   }
@@ -112,5 +117,28 @@ body {
   &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+
+  &-right {
+    position: relative;
+    &-image-desktop {
+      border-radius: 15px;
+      width: 800px;
+    }
+  
+    &-image-mobile {
+      position: absolute;
+      border-radius: 15px;
+      width: 200px;
+      left: -10px;
+      bottom: -15px;
+    }
   }
 }
