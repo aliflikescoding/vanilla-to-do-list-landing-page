@@ -2,3 +2,9 @@
 @import "./resets";
 @import "./variables";
 
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: $background;
+  color: $text;
+}
