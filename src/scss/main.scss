@@ -20,7 +20,7 @@ body {
   a {
     color: inherit; 
     text-decoration: none;
-  }
+  } 
 }
 
 .logo {
@@ -36,6 +36,14 @@ body {
     font-size: 2.5rem;
     font-weight: map-get($font-weights, bold);
     margin-left: 5px;
+  }
+
+  &-link {
+
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $success;
+    }
   }
 }
 
@@ -55,7 +63,7 @@ body {
   li {
     margin: 0;
     padding: 0;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 }
 
@@ -76,5 +84,28 @@ body {
   &-success {
     color: $background;
     background-color: $success;
+  }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $text;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
