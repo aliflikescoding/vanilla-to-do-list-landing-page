@@ -1,6 +1,5 @@
 # Webpack
 node_modules
-dist
 build
 
 # Generated files
