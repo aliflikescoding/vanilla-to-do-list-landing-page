@@ -75,6 +75,7 @@ body {
   font-weight: 600;
   padding: 10px 35px;
   border-radius: 50px;
+  transition: 0.3s ease-in-out;
 
   &-primary {
     color: $background;
@@ -84,6 +85,10 @@ body {
   &-success {
     color: $background;
     background-color: $success;
+  }
+  
+  &:hover {
+    transform: scale(.95);
   }
 }
 
