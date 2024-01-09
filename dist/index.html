@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDoList</title>
-  <link rel="icon" href="./images/to_do_list_logo.png">
-</head>
-<body>
-  <header class="header">
-    <a href="#" class="logo-link">
-      <div class="logo">
-        <img class="logo-img-icon" src="./images/to_do_list_logo.png" alt="logo icon">
-        <h1 class="logo-text">ToDoList</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link rel="icon" href="./images/to_do_list_logo.png" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo-link">
+        <div class="logo">
+          <img
+            class="logo-img-icon"
+            src="./images/to_do_list_logo.png"
+            alt="logo icon"
+          />
+          <h1 class="logo-text">ToDoList</h1>
+        </div>
+      </a>
+      <div class="header-links">
+        <ul>
+          <li class="hover-underline-animation"><a href="#hero">Home</a></li>
+          <li class="hover-underline-animation"><a href="#">About Us</a></li>
+          <li class="hover-underline-animation"><a href="#">Reviews</a></li>
+          <li class="hover-underline-animation">
+            <a href="#">Report A Bug</a>
+          </li>
+          <li>
+            <button class="button button-success">
+              <a
+                target="_blank"
+                href="https://aliflikescoding.github.io/to_do_list/"
+                >Start Now</a
+              >
+            </button>
+          </li>
+        </ul>
       </div>
-    </a>
-    <div class="header-links">
-      <ul>
-        <li class="hover-underline-animation"><a href="#hero">Home</a></li>
-        <li class="hover-underline-animation"><a href="#">About Us</a></li>
-        <li class="hover-underline-animation"><a href="#">Reviews</a></li>
-        <li class="hover-underline-animation"><a href="#">Report A Bug</a></li>
-        <li><button class="button button-success"><a target="_blank" href="https://aliflikescoding.github.io/to_do_list/">Start Now</a></button></li>
-      </ul>
-    </div>
-  </header>
-  <main>
-    <div class="hero" id="hero">
-      <div class="hero-left">
-        <h1>Start ToDoing now!</h1>
-        <p>begin managing, organizing, tracking, and logging your life with to do list now.</p>
-        <h3></h3>
-        <button class="button button-success"><a target="_blank" href="https://aliflikescoding.github.io/to_do_list/">Let's go</a></button>
+    </header>
+    <main>
+      <div class="hero" id="hero">
+        <div class="hero-left">
+          <h1>Start ToDoing now!</h1>
+          <p>
+            begin managing, organizing, tracking, and logging your life with to
+            do list now.
+          </p>
+          <h3></h3>
+          <button class="button button-success">
+            <a
+              target="_blank"
+              href="https://aliflikescoding.github.io/to_do_list/"
+              >Let's go</a
+            >
+          </button>
+        </div>
+        <div class="hero-right">
+          <img
+            class="hero-right-image-desktop"
+            src="./images/desktop-2.png"
+            alt="desktop screenshot of todo list"
+          />
+          <img
+            class="hero-right-image-mobile"
+            src="./images/mobile-1.png"
+            alt="mobile screenshot of todo list"
+          />
+        </div>
       </div>
-      <div class="hero-right">
-        <img class="hero-right-image-desktop" src="./images/desktop-2.png" alt="desktop screenshot of todo list">
-        <img class="hero-right-image-mobile" src="./images/mobile-1.png" alt="mobile screenshot of todo list">
+      <div class="about-us" id="about-us">
+        <div class="about-us-top">
+          <div class="about-us-top-left">
+            <img src="./images/undraw_articles_wbpb.svg" alt="vector">
+          </div>
+          <div class="about-us-top-right">
+            <h1>About ToDoList</h1>
+            <p>
+              A to do list website made by <a href="">aliflikescoding</a> for
+              the odin project, this landing page was made to practice my
+              landing page making skills with SASS
+            </p>
+          </div>
+        </div>
+        <div class="about-us-bottom">
+          <div class="about-us-card">
+            <h3>Terms and conditions</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              modi.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+          <div class="about-us-card">
+            <h3>Licensing</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              modi.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+          <div class="about-us-card">
+            <h3>More Information</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
+              modi.
+            </p>
+            <a href="">Learn More</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
-  <script type="module" src="./main.js"></script>
-</body>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
