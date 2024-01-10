@@ -220,7 +220,6 @@ a {
     
 
     &-right {
-      text-align: right;
       h1 {
         font-size: 5rem;
       }
@@ -235,6 +234,11 @@ a {
       }
     }
   }
+
+  &-middle {
+    margin-top: 15px;
+  }
+
   &-bottom {
     display: flex;
     justify-content: center;
