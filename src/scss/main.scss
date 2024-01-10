@@ -247,9 +247,15 @@ a {
   &-card {
     position: relative;
     font-size: 1.5rem;
+    & > * {
+      margin-top: 15px;
+    }
+
 
     a {
+      margin-top: 15px;
       color: $text;
+      font-weight: map-get($font-weights, bold);
     }
 
     &::after {
