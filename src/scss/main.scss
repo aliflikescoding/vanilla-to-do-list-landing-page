@@ -248,6 +248,10 @@ a {
     position: relative;
     font-size: 1.5rem;
 
+    a {
+      color: $text;
+    }
+
     &::after {
       content: '';
       position: absolute;
