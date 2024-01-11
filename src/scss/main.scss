@@ -293,7 +293,12 @@ a {
 
   &-card {
     position: absolute;
-    top: 50%;
-    left: 35%;
+  }
+
+  .button-area {
+    font-size: 3rem;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
   }
 }
