@@ -14,3 +14,51 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+const cardList = document.querySelectorAll('.reviews-card');
+const arrowLeft = document.querySelector('#arrow-left');
+const arrowRight = document.querySelector('#arrow-right');
+
+let currentCard = 0;
+
+setInterval(nextCard, 3000);
+
+function nextCard() {
+  currentCard++;
+  
+  if(currentCard >= cardList.length) {
+    currentCard = 0;
+  }
+  
+  showCard(currentCard);
+}
+
+function showCard(n) {
+  cardList.forEach(card => {
+    card.style.opacity = 0; 
+  });
+  
+  cardList[n].style.opacity = 1;
+}
+
+arrowRight.addEventListener('click', () => {
+  currentCard++;
+  
+  if(currentCard >= cardList.length) {
+    currentCard = 0;
+  }
+  
+  showCard(currentCard);
+});
+
+arrowLeft.addEventListener('click', () => {
+  currentCard--;
+  
+  if(currentCard < 0) {
+    currentCard = cardList.length - 1;
+  }
+  
+  showCard(currentCard); 
+});
+
+showCard(0);

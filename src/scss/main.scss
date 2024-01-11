@@ -300,8 +300,20 @@ a {
   background-color: $text;
   color: $background;
 
+  &-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
   &-card {
+    transition: opacity 0.5s ease-in-out;
     position: absolute;
+    opacity: 0;
 
     h1 {
       font-size: 3.5rem;
@@ -311,6 +323,10 @@ a {
       margin-top: 45px;
       font-size: 1.75rem;
     }
+  }
+
+  &-card-active {
+    opacity: 1;
   }
 
   .button-area {
