@@ -2,8 +2,9 @@
 @import "./resets";
 @import "./variables";
 
-
-html{scroll-behavior:smooth}
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   position: relative;
@@ -24,7 +25,9 @@ a {
   z-index: 3;
   position: absolute;
   height: 80px;
-	top: 0; right: 0; left: 0;
+  top: 0;
+  right: 0;
+  left: 0;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -47,16 +50,16 @@ a {
   }
 
   a {
-    color: inherit; 
+    color: inherit;
     text-decoration: none;
-  } 
+  }
 }
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   #{&}-img-icon {
     width: 50px;
   }
@@ -68,7 +71,6 @@ a {
   }
 
   &-link {
-
     transition: 0.3s ease-in-out;
     &:hover {
       color: $success;
@@ -79,7 +81,8 @@ a {
 .header-links {
   font-size: 1.4rem;
 
-  ul, ol {
+  ul,
+  ol {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -88,7 +91,7 @@ a {
     align-items: center;
     font-weight: map-get($font-weights, bold);
   }
-  
+
   li {
     margin: 0;
     padding: 0;
@@ -106,7 +109,7 @@ a {
   transition: 0.3s ease-in-out;
 
   a {
-    color: inherit; 
+    color: inherit;
     text-decoration: none;
   }
 
@@ -119,9 +122,9 @@ a {
     color: $background;
     background-color: $success;
   }
-  
+
   &:hover {
-    transform: scale(.95);
+    transform: scale(0.95);
     cursor: pointer;
   }
 }
@@ -130,13 +133,13 @@ a {
   display: inline-block;
   position: relative;
   transition: color 0.3s ease-in-out;
-  
+
   &:hover {
     color: $success;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -161,8 +164,13 @@ a {
   padding: 50px;
   height: 100vh;
   padding-top: 70px;
-  background: rgb(161,138,255);
-  background: linear-gradient(180deg, rgba(161,138,255,1) 9%, rgba(202,139,254,1) 44%, rgba(255,255,255,1) 85%);
+  background: rgb(161, 138, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(161, 138, 255, 1) 9%,
+    rgba(202, 139, 254, 1) 44%,
+    rgba(255, 255, 255, 1) 85%
+  );
 
   & > * {
     margin-right: 5%;
@@ -190,7 +198,7 @@ a {
       border-radius: 15px;
       width: 800px;
     }
-  
+
     &-image-mobile {
       position: absolute;
       border-radius: 15px;
@@ -217,7 +225,6 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: start;
-    
 
     &-right {
       h1 {
@@ -257,7 +264,6 @@ a {
       margin-top: 15px;
     }
 
-
     a {
       margin-top: 15px;
       color: $text;
@@ -265,13 +271,29 @@ a {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 2px;
       background-color: lighten($text, 50%);
       top: -15px;
-      left: 0; 
+      left: 0;
     }
+  }
+}
+
+.reviews {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: $text;
+  color: $background;
+
+  &-card {
+    position: absolute;
+    top: 50%;
+    left: 35%;
   }
 }
