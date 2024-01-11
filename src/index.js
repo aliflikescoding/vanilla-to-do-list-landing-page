@@ -21,7 +21,7 @@ const arrowRight = document.querySelector('#arrow-right');
 
 let currentCard = 0;
 
-setInterval(nextCard, 3000);
+let autoSwitch = setInterval(nextCard, 3000);
 
 function nextCard() {
   currentCard++;
@@ -49,6 +49,10 @@ arrowRight.addEventListener('click', () => {
   }
   
   showCard(currentCard);
+
+  clearInterval(autoSwitch);
+  
+  autoSwitch = setInterval(nextCard, 3000); 
 });
 
 arrowLeft.addEventListener('click', () => {
@@ -58,7 +62,11 @@ arrowLeft.addEventListener('click', () => {
     currentCard = cardList.length - 1;
   }
   
-  showCard(currentCard); 
+  showCard(currentCard);
+
+  clearInterval(autoSwitch);
+  
+  autoSwitch = setInterval(nextCard, 3000); 
 });
 
 showCard(0);
