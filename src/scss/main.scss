@@ -118,6 +118,11 @@ a {
     background-color: $primary;
   }
 
+  &-secondary {
+    color: $background;
+    background-color: $secondary;
+  }
+
   &-success {
     color: $background;
     background-color: $success;
@@ -293,6 +298,7 @@ a {
 
 .reviews {
   position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,5 +340,108 @@ a {
     position: absolute;
     bottom: 15%;
     right: 10%;
+  }
+}
+
+.report-a-bug {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darken($background, 2.5%);
+  position: relative;
+
+  .bug-image {
+    z-index: 1;
+    position: absolute;
+    transform: scale(2000%) rotate(30deg);
+    color: darken($background, 15%);
+    top: 20%;
+    right: 25%;
+  }
+
+  h1 {
+    font-size: 5rem;
+    color: $secondary;
+    z-index: 2;
+  }
+  h2 {
+    font-size: 3rem;
+    z-index: 2;
+  }
+  p {
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+  form {
+    background-color: $background;
+    padding: 15px 35px;
+    z-index: 2;
+  }
+
+  &-form-input {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 1.25rem;
+      color: lighten($text, 40%);
+    }
+
+    input {
+      background-color: darken($background, 2.5%);
+      border: none;
+      font-size: 2rem;
+      &:focus {
+        outline: none;
+        border: 1px solid $secondary;
+        -webkit-box-shadow:0px 0px 7.5px 0px $secondary;
+        -moz-box-shadow: 0px 0px 7.5px 0px $secondary;
+        box-shadow: 0px 0px 7.5px 0px $secondary;
+      }   
+    }
+
+    textarea {
+      background-color: darken($background, 2.5%);
+      border: none;
+      font-size: 1.75rem;
+      font-family: inherit;
+      resize: none;
+      &:focus {
+        outline: none;
+        border: 1px solid $secondary;
+        -webkit-box-shadow:0px 0px 7.5px 0px $secondary;
+        -moz-box-shadow: 0px 0px 7.5px 0px $secondary;
+        box-shadow: 0px 0px 7.5px 0px $secondary;
+      }
+    }
+  }
+
+  .section-one {
+    display: flex;
+
+
+    &-right {
+      margin-left: 30px;
+    }
+
+    &-left {
+      & > *:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .section-two {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    p {
+      font-size: 1.25rem;
+      color: lighten($text, 40%);
+    }
   }
 }
