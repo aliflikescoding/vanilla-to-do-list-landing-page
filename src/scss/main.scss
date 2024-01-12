@@ -392,6 +392,7 @@ a {
 
     input {
       background-color: darken($background, 2.5%);
+      color: lighten($text, 20%);
       border: none;
       font-size: 2rem;
       &:focus {
@@ -405,6 +406,7 @@ a {
 
     textarea {
       background-color: darken($background, 2.5%);
+      color: lighten($text, 20%);
       border: none;
       font-size: 1.75rem;
       font-family: inherit;
