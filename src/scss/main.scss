@@ -338,6 +338,38 @@ a {
     background-color: $background;
     padding: 15px 35px;
     z-index: 2;
+
+    input::placeholder {
+      opacity: 0;
+    }
+
+    input:focus::placeholder {
+      opacity: 35%;
+      font-size: 1.5rem;
+    }
+
+    input:invalid {
+      border-color: $error;
+      -webkit-box-shadow:0px 0px 7.5px 0px $error;
+      -moz-box-shadow: 0px 0px 7.5px 0px $error;
+      box-shadow: 0px 0px 7.5px 0px $error;
+    }
+
+    textarea:invalid {
+      border-color: $error;
+      -webkit-box-shadow:0px 0px 7.5px 0px $error;
+      -moz-box-shadow: 0px 0px 7.5px 0px $error;
+      box-shadow: 0px 0px 7.5px 0px $error;
+    }
+
+    textarea::placeholder {
+      opacity: 0;
+    }
+
+    textarea:focus::placeholder {
+      opacity: 35%;
+      font-size: 1.5rem;
+    }
   }
 
   &-form-input {
@@ -360,7 +392,7 @@ a {
         -webkit-box-shadow:0px 0px 7.5px 0px $secondary;
         -moz-box-shadow: 0px 0px 7.5px 0px $secondary;
         box-shadow: 0px 0px 7.5px 0px $secondary;
-      }   
+      } 
     }
 
     textarea {
@@ -459,6 +491,6 @@ footer {
         }
       }
     }
-  }
-  
+  } 
 }
+

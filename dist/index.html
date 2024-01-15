@@ -154,21 +154,25 @@
             <div class="section-one-left">
               <div class="report-a-bug-form-input">
                 <label for="name">Name</label>
-                <input type="text" name="" id="name">
+                <input minlength="5" maxlength="100" class="form-data-input" type="text" name="" id="name" placeholder="John Doe" required>
+                <span class="error"></span>
               </div>
               <div class="report-a-bug-form-input">
                 <label for="email">Email</label>
-                <input type="email" name="" id="email">
+                <input class="form-data-input" type="email" name="" id="email" placeholder="JohnDoe@something.com" required>
+                <span class="error"></span>
               </div>
               <div class="report-a-bug-form-input">
                 <label for="bug">Bug Title</label>
-                <input type="text" name="" id="bug">
+                <input minlength="5" maxlength="100" class="form-data-input" type="text" name="" id="bug" placeholder="flex box is weird" required>
+                <span class="error"></span>
               </div>
             </div>
             <div class="section-one-right">
               <div class="report-a-bug-form-input">
                 <label for="bug-desc">Describe The Bug</label>
-                <textarea name="" id="bug-desc" cols="30" rows="5"></textarea>
+                <textarea class="form-data-input" name="" id="bug-desc" cols="30" rows="5" placeholder="it isn't responsive"></textarea>
+                <span class="error"></span>
               </div>
             </div>
           </div>
